@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Camiseta",
+    "description": "Camiseta de algodón 100% de alta calidad",
+    "price": 20,
+    "image": "https://ejemplo.com/camiseta.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Solchi",
+    "description": "gama@gmail.com",
+    "price": 40,
+    "image": "no hay"
+  }
+]
