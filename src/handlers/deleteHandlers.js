@@ -5,7 +5,7 @@ const deleteProductHandler = async (req, res) => {
 
   try {
     const response = await deleteProduct(id);
-    res.status(200).send(response);
+    res.status(200).send(`El producto con el Id ${id} fue eliminado exitosamente`);
   } catch (error) {
     res.status(400).json({error: error.message});
   }

@@ -7,6 +7,7 @@ const dataFilePath = path.join(process.cwd(), "/src/utils/data.json");
 
 const updateProduct = async (id, name, description, price, image) => {
   let found = products.find((product) => product.id === Number(id));
+  console.log(found)
 
   if (!found) return "Product not found";
 

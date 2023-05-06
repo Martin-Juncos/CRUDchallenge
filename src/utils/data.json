@@ -1,16 +1,1 @@
-[
-  {
-    "id": 1,
-    "name": "Camiseta",
-    "description": "Camiseta de algodón 100% de alta calidad",
-    "price": 20,
-    "image": "https://ejemplo.com/camiseta.jpg"
-  },
-  {
-    "id": 2,
-    "name": "Solchi",
-    "description": "gama@gmail.com",
-    "price": 40,
-    "image": "no hay"
-  }
-]
+[{"id":4,"name":"bufanda","price":20,"description":"larga","image":"no hay"},{"id":5,"name":"media","price":10,"description":"toalla","image":"no hay"},{"id":6,"name":"camisa","price":50,"description":"seda","image":"no hay"},{"id":7,"name":"saco","price":60,"description":"abrigo","image":"no hay"}]
