@@ -1,10 +1,10 @@
 const {Router} = require("express");
-const {getProducts, getDetail} = require("../../handlers/gethandlers");
+const {getUsers, getDetail} = require("../../handlers/gethandlers");
 
 const getRouter = Router();
 
-// query ? /get/?name="pantalones" = /get/
-getRouter.get("/", getProducts);
+// query ? /get/?name=martin = /get/
+getRouter.get("/", getUsers);
 
 // params :   /get/3
 getRouter.get("/:id", getDetail);

@@ -1,22 +1,33 @@
-const products = require("../utils/data.json");
+// const products = require("../utils/data.json");
 
-const path = require("path");
-const fsPromises = require("fs/promises");
+// const path = require("path");
+// const fsPromises = require("fs/promises");
 
-const dataFilePath = path.join(process.cwd(), "/src/utils/data.json");
-console.log(dataFilePath)
+// const dataFilePath = path.join(process.cwd(), "/src/utils/data.json");
+// console.log(dataFilePath)
 
-const deleteProduct = async (id) => {
-  const found = products.find((product) => product.id === Number(id));
-  if (found) {
-    const deletion = products.filter((elements) => elements.id !== found.id);
+// const deleteProduct = async (id) => {
+//   const found = products.find((product) => product.id === Number(id));
+//   if (found) {
+//     const deletion = products.filter((elements) => elements.id !== found.id);
 
-    const updatedData = JSON.stringify(deletion);
+//     const updatedData = JSON.stringify(deletion);
 
-    await fsPromises.writeFile(dataFilePath, updatedData);
+//     await fsPromises.writeFile(dataFilePath, updatedData);
 
-    return products;
-  }
+//     return products;
+//   }
+// };
+
+// module.exports = {deleteProduct};
+
+
+const {User} = require('../db')
+
+const deleteUser = async (id) => {
+  const userToDelete = await User.findByPk(id);
+  await userToDelete.destroy();
+  return userToDelete;
 };
 
-module.exports = {deleteProduct};
+module.exports = {deleteUser}

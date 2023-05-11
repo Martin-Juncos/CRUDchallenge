@@ -1,8 +1,8 @@
 const {Router} = require("express");
-const {updateProductHandler} = require("../../handlers/putHandlers");
+const {updateUsertHandler} = require("../../handlers/putHandlers");
 
 const putRouter = Router();
 
-putRouter.put("/", updateProductHandler);
+putRouter.put("/", updateUsertHandler);
 
 module.exports = putRouter;
