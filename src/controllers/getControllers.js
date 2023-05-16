@@ -39,10 +39,19 @@
 
 
 const { Op } = require("sequelize");
-const { User } = require("../db");
+const { User, Page } = require("../db");
 
 const getAllUsers = async () => {
-  const users = await User.findAll();
+  const users = await User.findAll({
+    include: {
+      model: Page,
+      attributes : ['title'],
+      through: {
+        attributes : []
+      }
+    },
+    
+  });
   return users;
 };
 const getUserId = async (id) => {
